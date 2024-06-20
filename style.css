@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+--Tomato: hsl(4, 100%, 67%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Charcoal-Grey);
+    font-family: 'Roboto';
+}
+#container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    background-color: var(--White);
+    border-radius: 45px;
+    overflow: hidden;
+    padding: 10px;
+}
+.details{
+    width: 100%;
+    height: 350px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+h1{
+    font-size: 50px;
+    color: var(--Dark-Slate-Grey);
+    margin-bottom: 30px;
+    align-self: center;
+    font-weight: 700;
+    margin-top: -30px;
+}
+p{
+    color:var(--Dark-Slate-Grey);
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+ul{
+    align-self: center;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+li{
+    list-style: none;
+    list-style-image: url(icon-list.svg);
+    color: var(--Dark-Slate-Grey);
+    font-size: 20px;
+    padding: 10px;
+
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    margin-bottom:20px;
+    color: black;
+    border-radius: 7px;
+    font-size: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+input:focus{
+    opacity: 1;
+    transition: 0.5s ease;
+}
+button{
+    width: 100%;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-size: 18px;
+    border-radius: 10px;
+    height: 50px;
+    align-self: center;
+    opacity: 0.8;
+    
+}
+.active{
+    background-color: var(--Tomato);
+    box-shadow: 1px 2px 1px var(--Tomato);
+    border: 1px solid var(--Tomato);
+    transition: 0.5s ease;
+    opacity: 1;
+    cursor: pointer;
+}
+.design{
+    margin:10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -25px;
+}
+#containertwo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 500px;
+    height: 500px;
+    background-color: var(--White);
+    border-radius: 45px;
+    overflow: hidden;
+    padding: 50px;
+}
+h2{
+    font-size: 50px;
+    align-self: center;
+    justify-self: center;
+}
+.hidden{
+    visibility: hidden;
+}
+@media (min-width:0px) and (max-width:470px) {
+    #container{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100vh;
+        overflow: hidden;
+        border: 0;
+        border-radius: 0;
+    }
+    .design{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        height: 400px;
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+    }
+    #design{
+       position: absolute;
+       left: 0px;
+       top: 0px;
+       width: 100%;
+       height: 400px;
+       transform: scalex(1.7);
+    }
+    h1 {
+        font-size: 50px;
+        color: var(--Dark-Slate-Grey);
+        margin-bottom: 30px;
+        align-self: center;
+        font-weight: 700;
+        margin-top: -200px;
+    }
+    li {
+        list-style: none;
+        list-style-image: url(icon-list.svg);
+        color: var(--Dark-Slate-Grey);
+        font-size: 18px;
+        padding: 5px;
+        margin-right: -25px;
+    }
+    #containertwo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        width: 500px;
+        height: 500px;
+        background-color: var(--White);
+        border-radius: 45px;
+        overflow: hidden;
+        padding: 50px;
+        height: 100vh;
+    }
+    #success {
+        margin-top: 150px;
+    }
+    h2 {
+        margin-top: -290px;
+        margin-bottom: -350px;
+    }
+    }
+
